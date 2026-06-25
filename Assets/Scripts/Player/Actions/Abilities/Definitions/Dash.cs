@@ -7,4 +7,5 @@ public class Dash
     public bool hasDash;
     public double dashCooldown = 0.75;
     public double dashForce = 20;
+    public KeyCode dashKey = KeyCode.C;
 }

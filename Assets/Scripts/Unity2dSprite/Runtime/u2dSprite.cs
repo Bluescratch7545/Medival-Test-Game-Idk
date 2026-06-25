@@ -1,19 +1,7 @@
 using UnityEngine;
 
-namespace U2D{
-    [System.Serializable]
-    public class u2dSpriteDefinition
-    {
-        public string name;
-        public Sprite sprite;
-    }
-
-    [CreateAssetMenu(menuName = "Unity 2d Sprite/Create Sprite Collection")]
-    public class u2dSpriteCollectionData : ScriptableObject
-    {
-        public Material material;
-        public u2dSpriteDefinition[] sprites;
-    }
+namespace U2D
+{
 
     [RequireComponent(typeof(MeshFilter))]
     [RequireComponent(typeof(MeshRenderer))]
@@ -108,14 +96,5 @@ namespace U2D{
             Vector3.forward
             };
         }
-    }
-
-    [CreateAssetMenu(menuName = "Unity 2d Sprite/Create Animation Clip")]
-    public class u2dAnimationClip : ScriptableObject
-    {
-        public u2dSpriteCollectionData atlas;
-        public int[] frames;
-        public float fps;
-        public bool loop;
     }
 }
