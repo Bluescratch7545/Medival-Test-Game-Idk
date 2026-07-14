@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99929f21d609e624eb397cf3c208d657, type: 3}
+  m_Name: Roar Lock
+  m_EditorClassIdentifier: 
+  states:
+  - name: Idle
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 314
+      width: 160
+      height: 80
+    guid: cf08e61b-e874-45a3-a880-6a340976eac8
+    transitions:
+    - eventName: ROAR ENTER
+      targetState:
+        name: 
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        guid: 
+        transitions: []
+        actions: []
+      targetGuid: 8448e1aa-ef41-4063-8788-df4f8b9fbbc6
+    actions: []
+  - name: Lock
+    rect:
+      serializedVersion: 2
+      x: 518
+      y: 503
+      width: 160
+      height: 80
+    guid: 8448e1aa-ef41-4063-8788-df4f8b9fbbc6
+    transitions:
+    - eventName: ROAR EXIT
+      targetState:
+        name: 
+        rect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        guid: 
+        transitions: []
+        actions: []
+      targetGuid: 5b8081a5-44bd-483c-a9aa-c8c1c68b34df
+    actions:
+    - action:
+        id: 0
+  - name: Return
+    rect:
+      serializedVersion: 2
+      x: 97
+      y: 504
+      width: 160
+      height: 80
+    guid: 5b8081a5-44bd-483c-a9aa-c8c1c68b34df
+    transitions:
+    - eventName: FINISHED
+      targetState:
+        name: Idle
+        rect:
+          serializedVersion: 2
+          x: 288
+          y: 309
+          width: 160
+          height: 80
+        guid: cf08e61b-e874-45a3-a880-6a340976eac8
+        transitions:
+        - eventName: ROAR ENTER
+          targetState:
+            name: 
+            rect:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+            guid: 
+            transitions: []
+            actions: []
+          targetGuid: 
+        actions: []
+      targetGuid: cf08e61b-e874-45a3-a880-6a340976eac8
+    actions:
+    - action:
+        id: 1
+  references:
+    version: 1
+    00000000:
+      type: {class: SetBool, ns: , asm: Assembly-CSharp}
+      data:
+        go: {fileID: 0}
+        field: 
+        value:
+          type: 2
+          intValue: 0
+          floatValue: 0
+          boolValue: 1
+          stringValue: 
+          objectValue: {fileID: 0}
+    00000001:
+      type: {class: SendEvent, ns: , asm: Assembly-CSharp}
+      data:
+        eventName: FINISHED
