@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Unity FSM/Actions/SendEvent")]
 public class SendEvent : uFSMAction
 {
     public string eventName;

@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Unity FSM/Actions/Wait")]
 public class Wait : uFSMAction
 {
     public float time;

@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Unity FSM/Actions/Debug Log")]
 public class uFSMActionDebugLog : uFSMAction
 {
     public uFSMValue message = new uFSMValue() { stringValue = "Hello FSM" };

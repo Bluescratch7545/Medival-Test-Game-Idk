@@ -2,7 +2,6 @@ using System;
 using System.Reflection;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Unity FSM/Actions/Set Bool")]
 public class SetBool : uFSMAction
 {
     public MonoBehaviour go;

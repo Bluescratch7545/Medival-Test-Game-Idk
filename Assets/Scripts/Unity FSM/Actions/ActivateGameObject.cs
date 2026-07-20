@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Unity FSM/Actions/Activate Game Object")]
 public class ActivateGameObject : uFSMAction
 {
     public GameObject gameObject;

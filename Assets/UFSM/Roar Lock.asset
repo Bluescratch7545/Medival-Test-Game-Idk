@@ -16,7 +16,7 @@ MonoBehaviour:
   - name: Idle
     rect:
       serializedVersion: 2
-      x: 310
+      x: 311
       y: 314
       width: 160
       height: 80
