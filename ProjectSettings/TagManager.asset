@@ -11,8 +11,8 @@ TagManager:
   - Terrain
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - PlayerGlow
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1043698793
+    locked: 0
+  - name: PlayerGlow
+    uniqueID: 3814617775
     locked: 0

@@ -18,6 +18,10 @@ public class PlayerData
 
     private bool hasDarkFireball;
 
+    private bool hasDash;
+
+    private bool hasUprightDive;
+
     public static void SetBool(PlayerData playerData, string name, bool value)
     {
         var field = playerData.GetType().GetField(name);

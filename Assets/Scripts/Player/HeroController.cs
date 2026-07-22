@@ -15,8 +15,6 @@ public class HeroController : DataControl
 
     public bool isGrounded;
 
-    [NonSerialized]
-
     float speed = 0;
     float jumpForce = 0;
 
@@ -25,8 +23,6 @@ public class HeroController : DataControl
         base.Awake();
 
         instance = this;
-
-        Debug.Log("A");
 
         speed = (float)this.GetData("MoveVarSpeed").GetValue();
         jumpForce = (float)this.GetData("JumpVarForce").GetValue();
@@ -101,9 +97,13 @@ public class HeroController : DataControl
 
     void AbilityHandle(float jumpForce)
     {
-        if (Input.GetKeyDown(KeyCode.S) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.S) && isGrounded /*&& PlayerData.GetBool(PlayerData.instance, "hasUprightDive")*/);
         {
             StartCoroutine(UprightDive(jumpForce));
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+
         }
     }
 
@@ -116,14 +116,20 @@ public class HeroController : DataControl
     IEnumerator UprightDive(float jumpForce)
     {
         var timer = 0f;
-        while (timer < 1f)
+        while (timer < 3f)
         {
             timer += Time.deltaTime;
             yield return null; 
         }
+        gameObject.transform.Find("GlowObject").gameObject.transform.localScale = new Vector2(2.95f, 2.95f);
+        yield return new WaitForSeconds(0.1f);
+        gameObject.transform.Find("GlowObject").gameObject.transform.localScale = new Vector2(2.79f, 2.79f);
+
 
         yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.S));
         rigidbody.AddForce(new Vector2(rigidbody.velocity.x, jumpForce * 4), ForceMode2D.Impulse);
+        gameObject.transform.Find("GlowObject").gameObject.transform.localScale = new Vector2(0.5f, 1);
+
     }
 
     void RegisterAllHandles()

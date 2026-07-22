@@ -51,7 +51,7 @@ namespace U2D
                 new Vector3( width * 0.5f, -height * 0.5f, 0)
             };
 
-            meshRenderer.material.mainTexture = sprite.texture;
+            meshRenderer.sharedMaterial.mainTexture = sprite.texture;
 
             Vector2[] uvs = sprite.uv;
 
@@ -94,6 +94,14 @@ namespace U2D
             Vector3.forward,
             Vector3.forward,
             Vector3.forward
+            };
+
+            mesh.uv = new Vector2[]
+            {
+                new Vector2(0, 0),
+                new Vector2(0, 1),
+                new Vector2(1, 1),
+                new Vector2(1, 0)
             };
         }
     }

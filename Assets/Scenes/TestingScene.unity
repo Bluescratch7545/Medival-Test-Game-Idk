@@ -299,7 +299,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 48.1
+  orthographic size: 8.07
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -386,55 +386,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c9f59b6e32a5af44a18af3cd0056e2a, type: 3}
---- !u!1 &3048792866657993157 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3048792868233549412, guid: 8c9f59b6e32a5af44a18af3cd0056e2a, type: 3}
-  m_PrefabInstance: {fileID: 3048792866657993156}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3048792866657993158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3048792866657993157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6d34753c8cf534eb8aafe1b4328959, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-  - id: 0
-  - id: 1
-  - id: 2
-  rigidbody: {fileID: 3048792866657993160}
-  canJump: 0
-  isGrounded: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: FLOAT, ns: , asm: Assembly-CSharp}
-      data:
-        name: MoveVarSpeed
-        val: 0
-        setTo: 1.2
-    00000001:
-      type: {class: FLOAT, ns: , asm: Assembly-CSharp}
-      data:
-        name: JumpVarForce
-        val: 0
-        setTo: 6.25
-    00000002:
-      type: {class: FLOAT, ns: , asm: Assembly-CSharp}
-      data:
-        name: 
-        val: 0
-        setTo: 0
---- !u!50 &3048792866657993160 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 3048792868233549420, guid: 8c9f59b6e32a5af44a18af3cd0056e2a, type: 3}
-  m_PrefabInstance: {fileID: 3048792866657993156}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7938758182002185933
 PrefabInstance:
   m_ObjectHideFlags: 0
